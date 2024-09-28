@@ -1,9 +1,8 @@
-//your JS code here. If required.
 const inputBtn = document.getElementById("btn")
 const inputNumber = document.getElementById("ip").value
 const output = document.getElementById("output")
 
-inputBtn.addEventListener("click", delay())
+inputBtn.addEventListener("click", function() {
 
 function delay(value,time){
        return new Promise((resolve) => {
@@ -33,4 +32,5 @@ delay(inputNumber, 2000)
 .then((finalResult) => {
           output.innerText = `Final Result: ${result}` 
 })
-.catch( (e) => output.innerText = `Error: ${error}`)
+.catch( (e) => output.innerText = `Error: ${e}`)
+})
